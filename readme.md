@@ -28,7 +28,7 @@ The project uses two primary datasets:
 
 ## Technologies Used
 - **Big Data**: Apache Spark (via Amazon EMR) for ETL processing.
-- **Cloud Services**: AWS S3 (data storage), AWS Lambda (serverless processing), Amazon DynamoDB (NoSQL database).
+- **Cloud Services**: AWS S3 (data storage), AWS Lambda (serverless processing), Amazon DynamoDB (NoSQL database), Amazon Redshift (SQL database).
 - **Streaming**: Confluent Kafka for real-time data streaming.
 - **Languages**: Python (**PySpark, Lambda functions**).
 - **Other Tools**: Git for version control, PEM files for secure access.
@@ -53,33 +53,14 @@ The project uses two primary datasets:
 ### Prerequisites
 - **AWS account** with access to **EMR, S3, Lambda, DynamoDB, and Kafka**.
 - **Confluent Kafka account** or self-hosted Kafka cluster.
-- **Python 3.8+** installed locally.
+- **Python 3.11+** installed locally.
 
 ### Setup Instructions
-1. **Clone the Repository**:
-   ```sh
-   git clone <repository-url>
-   cd ipl-streaming-project
-   ```
-2. **Install Python Dependencies**:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. **Configure AWS Services**:
-   - Set up an **S3 bucket** for data storage.
-   - Deploy **Spark jobs on EMR**.
-   - Configure **Lambda functions** to process real-time data.
-   - Ensure **DynamoDB** is set up for storing processed data.
-
-4. **Run Local Kafka Publisher**:
-   ```sh
-   python local_publishing/publishing_stream.py
-   ```
-
-5. **Deploy and Test**:
-   - Verify that **Spark ETL jobs** process historical data correctly.
-   - Ensure **Kafka streams live match data**.
-   - Check **DynamoDB** for updated player statistics.
+**Deploy and Test**:
+- Verify that **Spark ETL jobs** process historical data correctly.
+- Ensure **Kafka streams live match data**.
+- Check **DynamoDB** for updated streaming ball detail.
+- Check **Redshift** for updated player statistics.
 
 ---
 
