@@ -20,6 +20,12 @@ The project uses two primary datasets:
    - `match_id`, `inning`, `batting_team`, `bowling_team`, `over`, `ball`, `batter`, `bowler`, `non_strike_batsman`, `extra_runs`, `total_runs`, `extras_type`, `is_wicket`, `player_dismissed`, `dismissal_kind`, `fielder`.
    - Sample data from **Match ID 335982**, showing deliveries with details like runs, extras, and wickets.
 
+
+## Project Architecture 
+![Streaming.png](Streaming.png)
+
+
+
 ## Technologies Used
 - **Big Data**: Apache Spark (via Amazon EMR) for ETL processing.
 - **Cloud Services**: AWS S3 (data storage), AWS Lambda (serverless processing), Amazon DynamoDB (NoSQL database).
@@ -39,8 +45,8 @@ The project uses two primary datasets:
 ├── local_publishing/          # Local scripts for data publishing
 │   └── publishing_stream.py   # Script to publish data to Kafka
 ├── architecture_streaming.png # Architecture diagram
-├── ipl_etl.pem                # Security key for EMR access
-└── publishing_data.csv        # Data for publishing to Kafka
+├── readme.md                  # Readme file
+└── publishing.csv        # Data for publishing to Kafka
 ```
 
 ## Installation and Setup
